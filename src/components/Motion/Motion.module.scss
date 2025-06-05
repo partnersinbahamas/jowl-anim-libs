@@ -1,50 +1,50 @@
 .box {
-    margin: 10px;
-    min-width: 50px;
-    min-height: 50px;
+  margin: 10px;
+  min-width: 50px;
+  min-height: 50px;
 }
 
 .tag {
-    position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-color: #ff0088;
+}
+
+.scroll {
+  position: relative;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  max-width: 100%;
+  overflow-x: visible;
+  overflow-y: scroll;
+  position: relative;
+
+  &-tag {
+    position: 'fixed';
     top: 0;
     left: 0;
     right: 0;
     height: 10px;
-    background-color: #ff0088;
-}
-
-.scroll {
-    position: relative;
-    background-color: #ccc;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    max-width: 100%;
-    overflow-x: visible;
-    overflow-y: scroll;
-    position: relative;
-
-    &-tag {
-        position: "fixed";
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 10px;
-        background-color: "#ff0088";
-    }
+    background-color: '#ff0088';
+  }
 }
 
 .drager {
-    background-color: blue;
-    width: 50px;
-    height: 50px;
+  background-color: blue;
+  width: 50px;
+  height: 50px;
 }
 
 .collapse {
-    background-color: yellow;
-    overflow: hidden;
-    ul {
-        list-style: none;
-        padding: 0;
-    }
+  background-color: yellow;
+  overflow: hidden;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 }
