@@ -1,9 +1,12 @@
-import './App.css'
+import Motion from './components/Motion/Motion';
+import './App.css';
 
 function App() {
 
   return (
-    <section>Hello</section>
+    <section>
+      <Motion />
+    </section>
   )
 }
 
