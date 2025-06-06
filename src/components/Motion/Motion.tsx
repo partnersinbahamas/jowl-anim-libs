@@ -10,6 +10,7 @@ import {
   useSpring,
   useTime,
   useTransform,
+  AnimatePresence,
 } from 'motion/react';
 
 import styles from './Motion.module.scss';
@@ -20,6 +21,7 @@ const Motion = () => {
   const dragRef = useRef<HTMLDivElement>(null);
   // detects when the provided element is within the viewport.
   const isDragInView = useInView(dragRef);
+  const [show, setShow] = useState(false);
 
   const [isListOpen, setIsListOpen] = useState(false);
 
@@ -114,7 +116,21 @@ const Motion = () => {
           ))}
         </motion.ul>
       </div>
-      <h1>hellp</h1>
+
+      <button onClick={() => setShow((current) => !current)}>click me</button>
+      <AnimatePresence>
+      {show && (
+        <motion.div
+          layout
+          transition={{duration: 0.5}}
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 'auto' }}
+        >
+            Show me
+        </motion.div>
+      )}
+      </AnimatePresence>
     </div>
   );
 };
